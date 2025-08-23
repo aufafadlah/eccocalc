@@ -81,5 +81,16 @@
       hasilDiv.style.animation = "fadeIn 0.5s ease";
     }
   </script>
+
+  <script>
+  window.addEventListener("scroll", () => {
+    document.body.classList.add("scrolling");
+    clearTimeout(window.scrollTimeout);
+    window.scrollTimeout = setTimeout(() => {
+      document.body.classList.remove("scrolling");
+    }, 150);
+  });
+</script>
+
 </body>
 </html>
