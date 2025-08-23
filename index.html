@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ecocalc</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <link rel="stylesheet" href="style.css">
   <nav>
     <div class="logo">🌍 EC</div>
     <ul>
@@ -26,6 +26,41 @@
       <img src="globe.jpg.png" alt="Globe">
     </div>
   </section>
-</body>
 
+  <section class="calc-container">
+    <h2>Kalkulator Emisi Karbon</h2>
+    <p>Masukkan jumlah aktivitas (misalnya kg sampah plastik):</p>
+    <input type="number" id="aktivitas" placeholder="Masukkan jumlah" min="0">
+    <br>
+    <button onclick="hitungEmisi()">Hitung Emisi</button>
+    <div class="result" id="hasil"></div>
+  </section>
+
+  <script>
+  function hitungEmisi() {
+    let aktivitas = document.getElementById("aktivitas").value;
+    let hasilDiv = document.getElementById("hasil");
+
+    if (aktivitas === "" || aktivitas < 0) {
+      hasilDiv.innerText = "Masukkan jumlah yang valid.";
+      hasilDiv.style.opacity = 1;
+      hasilDiv.style.animation = "fadeIn 0.5s ease";
+      return;
+    }
+
+    let faktorTerendah = 2.9;
+    let faktorTertinggi = 6.0;
+
+    let emisiMin = aktivitas * faktorTerendah;
+    let emisiMax = aktivitas * faktorTertinggi;
+
+    hasilDiv.innerText = `Emisi Karbon: ${emisiMin.toFixed(2)} - ${emisiMax.toFixed(2)} kg CO₂`;
+
+    // aktifkan animasi setiap update hasil
+    hasilDiv.style.opacity = 1;
+    hasilDiv.style.animation = "fadeIn 0.5s ease";
+  }
+</script>
+
+</body>
 </html>
