@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #6bb09f 0%, #033f3a 30%, #02302d 100%);
+  background: linear-gradient(to bottom, #6bb09f 0%, #033f3a 30%, #004643 100%);
   color: white;
   scroll-behavior: smooth; /* scroll enak */
 }
@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #6bb09f;
+  background: #7DB2A2;
   padding: 10px 40px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
   border-bottom: 2px solid #0d6efd;
@@ -101,16 +101,18 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: #ABD1C6;
 }
 
 .info-box {
-  background: rgba(0, 0, 0, 0.4);
+  background-color: #00473E; /* ✅ warna solid */
   border-radius: 15px;
   padding: 20px;
   flex: 1 1 300px;
   max-width: 350px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
   text-align: left;
+  color: #ffffff; /* ✅ teks putih biar kontras */
 }
 
 /* Kalkulator Section */
