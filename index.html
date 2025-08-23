@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
       <li><a href="#hero" style="font-weight: bold;">Home</a></li>
       <li><a href="#info" style="font-weight: bold;">About</a></li>
       <li><a href="#calc" style="font-weight: bold;">Calc</a></li>
-      <li><a href="#" style="font-weight: bold;">...</a></li>
+      <li><a href="page3.html" style="font-weight: bold;">...</a></li>
     </ul>
   </nav>
 
@@ -45,10 +45,69 @@
     </div>
   </section>
 
+  
+
+  <section class="content">
+    <div class="back-btn">
+      <a href="index.html">←</a>
+    </div>
+    <div class="illustration">
+      <div class="cloud">
+        <span>CO₂</span>
+      </div>
+    </div>
+    <div class="text-box">
+      <p>
+        Pembakaran plastik melepaskan seluruh karbon yang tersimpan di dalamnya ke atmosfer dalam bentuk CO₂, 
+        sekaligus menghasilkan polutan berbahaya seperti dioksin, furan, dan merkuri. Sekitar 
+        <b>40% limbah plastik global</b> masih dibakar secara terbuka, sehingga mempercepat pelepasan emisi karbon 
+        dan memperburuk kualitas udara (The Conversation, 2023).
+      </p>
+    </div>
+  </section>
+
+  <section class="main-section">
+        <div class="left">
+            <h1>Dampak<br>Emisi<br>Carbon</h1>
+            <div class="tree-illustration">
+                <div class="tree"></div>
+                <div class="tree"></div>
+                <div class="tree"></div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="text-box">
+                <div class="label">Lingkungan</div>
+                <p>
+                    Lingkungan Hidup Emisi karbon membuat bumi kehilangan keseimbangannya. Suhu global naik lebih dari 1,2°C sejak era pra-industri, memicu kekeringan, kebakaran hutan, dan udara kotor yang menyesakkan (NASA). Sumber Laut ikut terluka. Keasaman meningkat 30% sejak Revolusi Industri, suhu permukaan naik, dan terumbu karang memutih lalu mati. Laut yang dulu penuh kehidupan, kini perlahan sepi (NOAA).
+                </p>
+            </div>
+        </div>
+    </section>
+
+      <section id="page5-section">
+    <div class="page5-content">
+      <div class="page5-card">
+        <h3>Hewan</h3>
+        <p>
+          Lebih dari 1 juta spesies terancam punah akibat perubahan iklim (WWF).<br>
+          Es mencair membuat beruang kutub kehilangan daratan, hutan yang terbakar meninggalkan koala tanpa rumah, dan pola migrasi burung kacau.<br>
+          Hewan yang dulu hidup bebas, kini dipaksa bertahan di dunia yang terus berubah.
+        </p>
+      </div>
+
+      <div class="page5-right">
+        <h1>Dampak<br>Emisi<br>Carbon</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Whale">
+      </div>
+    </div>
+  </section>
+
   <!-- Kalkulator Section -->
-  <section id="calc">
+  <section id="Calc">
     <div class="calc-container">
-      <h2>Kalkulator Emisi Karbon</h2>
+      <h2 >Kalkulator Emisi Karbon</h2>
       <p>Masukkan Berat Sampah:</p>
       <input type="number" id="aktivitas" placeholder="Masukkan dalam bentuk Kg" min="0">
       <br>
@@ -57,40 +116,7 @@
     </div>
   </section>
 
-  <script>
-    function hitungEmisi() {
-      let aktivitas = document.getElementById("aktivitas").value;
-      let hasilDiv = document.getElementById("hasil");
-
-      if (aktivitas === "" || aktivitas < 0) {
-        hasilDiv.innerText = "Masukkan jumlah yang valid.";
-        hasilDiv.style.opacity = 1;
-        hasilDiv.style.animation = "fadeIn 0.5s ease";
-        return;
-      }
-
-      let faktorTerendah = 2.9;
-      let faktorTertinggi = 6.0;
-
-      let emisiMin = aktivitas * faktorTerendah;
-      let emisiMax = aktivitas * faktorTertinggi;
-
-      hasilDiv.innerText = `Emisi Karbon: ${emisiMin.toFixed(2)} - ${emisiMax.toFixed(2)} kg CO₂`;
-
-      hasilDiv.style.opacity = 1;
-      hasilDiv.style.animation = "fadeIn 0.5s ease";
-    }
-  </script>
-
-  <script>
-  window.addEventListener("scroll", () => {
-    document.body.classList.add("scrolling");
-    clearTimeout(window.scrollTimeout);
-    window.scrollTimeout = setTimeout(() => {
-      document.body.classList.remove("scrolling");
-    }, 150);
-  });
-</script>
-
+  <!-- JS eksternal -->
+  <script src="script.js"></script>
 </body>
 </html>
