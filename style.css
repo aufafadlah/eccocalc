@@ -4,10 +4,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 body {
-  background: linear-gradient(to bottom, #6bb09f 0%, #033f3a 30%, #004643 100%);
-  color: white;
+background-image: linear-gradient(to left top, #1b6ea6, #0082af, #00929c, #009d6d, #34a32c); color: white;
   scroll-behavior: smooth;
 }
 
@@ -16,7 +16,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #7DB2A2;
+  background: #34b68f94;
   padding: 10px 40px;
   box-shadow: 0 4px 6px #0000005b;
   position: fixed;
@@ -24,9 +24,17 @@ nav {
   width: 100%;
   z-index: 1000;
 }
+
+/* foto logo */
+nav img{
+  max-width: 40px;
+}
+  
+
 /*nav logo */
 nav .logo {
-  font-size: 24px;
+
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
@@ -130,7 +138,7 @@ section {
 
 /* Info Section (Updated) */
 .info {
-  background-color: #ABD1C6;
+  /* background-color: #ABD1C6; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -427,4 +435,85 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+/* farida ngoding dari sini */
+footer {
+  background: #f4a933; /* warna oranye */
+  color: #000;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-section h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #2c3e50; /* lebih gelap pas hover */
+}
+
+.logo {
+  width: 40px;
+  height: 50px;
+}
+
+.social-links li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links img {
+  width: 35px;
+  height: 46px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  padding-top: 10px;
 }
