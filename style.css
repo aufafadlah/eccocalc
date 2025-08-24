@@ -1,6 +1,4 @@
-/* ===========================
-   Reset Dasar & Global
-=========================== */
+/* Reset Dasar */
 * {
   margin: 0;
   padding: 0;
@@ -14,33 +12,33 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ===========================
-   Navbar
-=========================== */
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #7DB2A2;
   padding: 10px 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  border-bottom: 2px solid #0d6efd;
+  box-shadow: 0 4px 6px #0000005b;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 
+/*nav logo */
 nav .logo {
   font-size: 24px;
   font-weight: bold;
   color: #fff;
 }
 
+/*nav home, about, calc */
 nav ul {
   display: flex;
   gap: 15px;
   list-style: none;
+  font-weight: bold;
 }
 
 nav ul li a {
@@ -48,7 +46,7 @@ nav ul li a {
   background-color: #ff9933;
   padding: 8px 20px;
   border-radius: 25px;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   transition: 0.3s;
 }
@@ -58,19 +56,83 @@ nav ul li a:hover {
   color: white;
 }
 
-/* ===========================
-   Section Umum / Hero / Main
-=========================== */
+/* aman */
+
+/* section umum/hero/main */
 section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
   padding: 80px 40px;
   flex-direction: column;
   text-align: center;
 }
 
+
+/* Info Section (Updated) */
+.info {
+  background-color: #ABD1C6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 100px 40px 60px;
+  justify-items: center;
+}
+
+.info-box {
+  background-color: #00473E;
+  border-radius: 25px;
+  padding: 25px 30px;
+  max-width: 350px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* aman */
+
+.page5-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.page5-nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.page5-nav-links button {
+  background: orange;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.page5-nav-links button:hover {
+  background: #ffb733;
+}
+/* dampak emisi carbon*/
 .main-section
 {
   background-color: #ABD1C6;
@@ -107,32 +169,8 @@ section {
   line-height: 1.2;
 }
 
-/* Pohon */
-.tree-illustration {
-  display: flex;
-  gap: 15px;
-}
 
-.tree {
-  width: 50px;
-  height: 70px;
-  background-color: #8B5A2B;
-  position: relative;
-  border-radius: 5px;
-}
-
-.tree::before {
-  content: '';
-  position: absolute;
-  bottom: 50px;
-  left: -25px;
-  width: 100px;
-  height: 50px;
-  background-color: #2ecc71;
-  border-radius: 50%;
-}
-
-/* Kanan: Teks Box */
+/* Kanan: Teks Box dampakn*/
 .right {
   max-width: 500px;
 }
@@ -192,11 +230,11 @@ section {
 /* ===========================
    Tombol Back
 =========================== */
-.back-btn {
+/* .back-btn {
   position: absolute;
   left: 40px;
   top: 120px;
-}
+} */
 
 .back-btn a {
   display: inline-block;
@@ -215,69 +253,6 @@ section {
   color: white;
 }
 
-/* ===========================
-   Info Section
-=========================== */
-/* ===========================
-   Info Section (Updated)
-=========================== */
-.info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 100px 40px 60px;
-  background-color: #ABD1C6;
-  justify-items: center;
-}
-
-.info-box {
-  background-color: #00473E;
-  border-radius: 15px;
-  padding: 25px 30px;
-  max-width: 350px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.info-box p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.info-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-}
-
-.page5-logo img {
-  width: 40px;
-  height: 40px;
-}
-
-.page5-nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.page5-nav-links button {
-  background: orange;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-}
-
-.page5-nav-links button:hover {
-  background: #ffb733;
-}
 
 /* Section Content */
 #page5-section {
@@ -403,28 +378,6 @@ section {
 /* ===========================
    Ilustrasi Awan + Teks CO2
 =========================== */
-.illustration {
-  margin: 40px 0 20px;
-}
-
-.cloud {
-  background: #dcdcdc;
-  border-radius: 50%;
-  width: 150px;
-  height: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset -5px -5px 10px rgba(0,0,0,0.2);
-}
-
-.cloud span {
-  font-size: 32px;
-  font-weight: bold;
-  color: #3a7bd5;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-}
 
 /* ===========================
    Konten Tambahan
@@ -439,7 +392,7 @@ section {
 }
 
 /* ===========================
-   Animasi
+   Animasi????????????
 =========================== */
 @keyframes fadeIn {
   from {
