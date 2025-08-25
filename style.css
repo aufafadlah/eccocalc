@@ -137,7 +137,7 @@ nav ul li a:hover {
 
 /* section umum*/
 section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items:center;
@@ -148,26 +148,28 @@ section {
 
 
 /* info section page2 */
-
 .judul1{
   font-size: 40px;
   font-weight: bold;
   text-align: center;
   color: #fff;
   text-shadow: 0px 20px 12px rgba(0, 0, 0, 0.3);
-  padding: 50px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;   
+  padding: 0;     
   grid-column: 1 / -1;
-
+ 
 }
+
 .info {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 kolom sejajar */
   gap: 30px;
   padding: 25px 40px 100px;
-  /* justify-items: center; */
-  justify-content: center;
   background-color: #00000044;
+  align-items: stretch;   /* tinggi card sejajar */
+  justify-items: stretch; /* tiap card melebar isi kolom */
 }
+
 .info img {
   width: 100px;
   height: 100px;
@@ -178,38 +180,43 @@ section {
   background-color: #00473E;
   border-radius: 25px;
   padding: 25px 30px;
-  max-width: 350px;
+  /* max-width: 350px;  <-- HAPUS agar kolom bisa membesar */
+  width: 100%;            /* isi penuh kolom grid */
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box1 {
-  background-color: #00473E;
-  border-radius: 25px;
-  padding: 25px 30px;
-  max-width: 350px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  align-items: center;
 }
 
 .info-box h3 {
   font-size: 25px;
   margin-bottom: 15px;
 }
+
 .info-box p {
   font-size: 16px;
   line-height: 1.6;
+  text-align: justify; 
+  /* paragraf rata kiri-kanan */
 }
+
 .info-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* aman */
+/* page 3 */
 
+.main-section
+{
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 100px 40px;
+  width: 100%;
+}
 .page5-logo img {
   width: 40px;
   height: 40px;
@@ -234,19 +241,8 @@ section {
   background: #ffb733;
 }
 /* dampak emisi carbon*/
-.main-section
-{
-  /* background-color: #ABD1C6; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-  padding: 100px 40px;
-  width: 100%;
-}
 
-/* Kiri: Judul + Ilustrasi */
+/* Kiri: Judul + Ilustrasi dampak */
 .left {
   display: flex;
   flex-direction: column;
@@ -269,13 +265,6 @@ section {
   margin-right: 255px;
 }
 
-.text-box {
-  background: #FFFFFE;
-  color: black;
-  padding: 20px 25px;
-  border-radius: 15px;
-  max-width: 700px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .text-box p {
