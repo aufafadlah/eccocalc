@@ -16,7 +16,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #34b68f94;
+  background: #00000060;
   padding: 10px 40px;
   box-shadow: 0 4px 6px #0000005b;
   position: fixed;
@@ -24,19 +24,17 @@ nav {
   width: 100%;
   z-index: 1000;
 }
-
-/* foto logo */
+/*  logo */
 nav img{
   max-width: 40px;
 }
-  
-
 /*nav logo */
 nav .logo {
-
   font-size: 20px;
   font-weight: bold;
   color: #fff;
+  width: 100px;
+  align-items:flex-start;
 }
 /*nav home, about, calc */
 nav ul {
@@ -59,11 +57,7 @@ nav ul li a:hover {
   color: white;
 }
 
-/* hero section */
-/* img hero */
-.hero img {
-  max-width: 400px;
-}
+/* hero section page 1 */
 .hero {
   display: flex;
   flex-direction: row;
@@ -72,6 +66,10 @@ nav ul li a:hover {
   gap: 30px;
   padding: 100px 40px;
   width: 100%;
+}
+/* img hero */
+.hero img {
+  max-width: 400px;
 }
 /* animasi hero */
 .hero-img {
@@ -121,10 +119,14 @@ nav ul li a:hover {
     color: rgb(0, 0, 0);
     transition: 0.3s;
   }
+  .hero a:hover {
+    background: #ff7700;
+    color: white;
+  }
 
-/* aman */
 
-/* section umum/hero/main */
+
+/* section umum*/
 section {
   min-height: 100vh;
   display: flex;
@@ -136,14 +138,26 @@ section {
 }
 
 
-/* Info Section (Updated) */
+/* info section page2 */
+.judul1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 20px 12px rgba(0, 0, 0, 0.3);
+  padding: 50px 0px 0px 0px;
+}
 .info {
-  /* background-color: #ABD1C6; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  padding: 100px 40px 60px;
+  padding: 0px 40px 100px;
   justify-items: center;
+}
+.info img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
 }
 
 .info-box {
@@ -155,23 +169,18 @@ section {
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .info-box h3 {
   font-size: 25px;
   margin-bottom: 15px;
 }
-
 .info-box p {
   font-size: 16px;
   line-height: 1.6;
 }
-
 .info-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
 }
-
-
 
 /* aman */
 
@@ -201,7 +210,7 @@ section {
 /* dampak emisi carbon*/
 .main-section
 {
-  background-color: #ABD1C6;
+  /* background-color: #ABD1C6; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -346,7 +355,7 @@ section {
 /* Background khusus untuk halaman Kalkulator */
 
 #Calc {
-  background-color: #7DB2A2;  /* Warna hanya untuk section kalkulator */
+  /* background-color: #7DB2A2;  Warna hanya untuk section kalkulator */
   min-height: 100vh;
   display: flex;
   justify-content: center;
