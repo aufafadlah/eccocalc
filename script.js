@@ -1,8 +1,8 @@
 function hitungEmisi() {
-  let aktivitas = document.getElementById("aktivitas").value;
+  let aktivitas = parseFloat(document.getElementById("aktivitas").value);
   let hasilDiv = document.getElementById("hasil");
 
-  if (aktivitas === "" || aktivitas < 0) {
+  if (isNaN(aktivitas) || aktivitas < 0) {
     hasilDiv.innerText = "Masukkan jumlah yang valid.";
     hasilDiv.style.opacity = 1;
     hasilDiv.style.animation = "fadeIn 0.5s ease";
@@ -20,6 +20,7 @@ function hitungEmisi() {
   hasilDiv.style.opacity = 1;
   hasilDiv.style.animation = "fadeIn 0.5s ease";
 }
+
 
 // efek scroll
 window.addEventListener("scroll", () => {

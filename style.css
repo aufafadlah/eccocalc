@@ -25,12 +25,34 @@ nav {
   z-index: 1000;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1; /* biar huruf & logo sejajar */
+}
+
+.brand .letter {
+  color: #fff;
+}
+
+.brand .logo-o {
+  height: 38px;       /* sedikit lebih besar dari font agar seimbang */
+  width: 38px;        /* bikin bulat */
+  margin-left: 0px;   /* jarak tipis setelah huruf C */
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+
+
 .label-navbar {
   font-size: 24px;
   font-weight: bold;
   color: #fff;
-  margin-left: -820px;
-  margin-right: 100px;
+  margin: 0;
 }
 /*  logo */
 nav img{
@@ -367,67 +389,100 @@ text-shadow: 0px 12px 10px rgba(0, 0, 0, 0.3);
 
 /* page 5 */
 /* Page 7 Container */
-.page7-container {
-  display: flex;
-  justify-content:space-around; 
-  align-items: center;
-  padding: 40px;
+/* ===== Page 7 (Tips) ===== */
+.page7-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;          /* konten berada di tengah halaman */
+  gap:60px;                        /* jarak kiri–kanan */
+  padding:80px 40px;
+  max-width:1100px;                /* lebar kanvas tetap */
+  margin:0 auto;                   /* center wrapper */
 }
 
-/* Left */
-.page-left h1 {
-  background: #064d3b;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.page-left{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-
-/* Right */
-.page7-tips {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
+.page7-img{                        /* kalau pakai ilustrasi */
+  width:220px;
+  margin-bottom:18px;
 }
 
+.page-left h1{
+  width:360px;                     /* ukuran kotak fix & stabil */
+  background:#064d3b;
+  color:#fff;
+  padding:28px 24px;
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+  font-size:48px;
+  font-weight:800;
+  line-height:1.12;
+  text-align:left;
+}
 
-.page7-tips li {
-  background: #064d3b;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-  position: relative;
-  z-index: 1;   /* teks/kotak di atas */
+.page7-right{ width:520px; }       /* panel kanan fix */
 
+.page7-tips{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  margin:0;
+  padding:0;
+}
+
+.page7-tips li{
+  background:#064d3b;
+  color:#fff;
+  padding:16px 24px;
+  border-radius:16px;
+  text-align:center;
+  font-weight:700;
+  font-size:20px;
+  box-shadow:0 6px 14px rgba(0,0,0,.2);
+}
+
+/* responsive: stack di layar kecil */
+@media (max-width: 820px){
+  .page7-container{flex-direction:column; gap:36px;}
+  .page-left h1, .page7-right{width:100%;}
 }
 
 /* Page 9 Title */
-.page9-title {
-  margin: 30px 0;
-  font-size: 32px;
-  font-weight: bold;
+.page9-section {
+  background: linear-gradient(135deg, #009688, #00695c); /* biar beda sama page sebelumnya */
+  padding: 60px 20px;
 }
 
-/* Page 9Card Container */
+.page9-title {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* Card Container */
 .page9-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  padding: 0 40px 40px;
+  justify-items: center;
 }
 
 /* Card Style */
 .page9-card {
-  background: #004d40;
-  padding: 10px;
+  background: #00473E;
+  padding: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
+  width: 250px;
+  text-align: center;
 }
 
 .page9-card:hover {
@@ -439,12 +494,23 @@ text-shadow: 0px 12px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   height: 150px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
-.page9-card p {
-  margin: 10px 0 0;
+/* Link di dalam card */
+.page9-card a {
+  display: block;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
+
+.page9-card a:hover {
+  color: #ffd54f; /* kuning biar ada efek hover */
+}
+
+
 
 /* footer */
 footer {
